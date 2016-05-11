@@ -7,5 +7,16 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p id="demo">We will be having a check in app.  </p>
+    <!-- Here's where we'll add a new task -->
+    <form method="POST" action="/students">
+      <input type="text" name="student">
+      <input type="submit" value="Submit">
+    </form>
+    <ul>
+      <% for (student in students){%>
+        <li><%= student + " " + students[student] %></li>
+        <% } %>
+    </ul>
   </body>
 </html>
