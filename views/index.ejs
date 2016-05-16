@@ -9,13 +9,16 @@
     <p>Welcome to <%= title %></p>
     <p id="demo">We will be having a check in app.  </p>
     <!-- Here's where we'll add a new task -->
-    <form method="POST" action="/students">
-      <input type="text" name="student">
+    <form method="POST" action="/foods">
+      <label>Food</label>
+      <input type="text" name="food">
+      <label>quantity</label>
+      <input type="text" name="quantity">
       <input type="submit" value="Submit">
     </form>
     <ul>
-      <% for (student in students){%>
-        <li><%= student + " " + students[student] %></li>
+      <% for (idx in foods){%>
+        <li><%=  foods[idx]['text'] + "-" + foods[idx]['Number'] %></li>
         <% } %>
     </ul>
   </body>
